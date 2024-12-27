@@ -1,0 +1,12 @@
+Requirements:
+1. A VPC with 2 subnet:
+- Subnet A : Direct route to the internet
+- Subnet B : Not direct route to the internet
+
+2. EC2 instance with key pair, running Ubuntu 24.04 LTS OS in subnet B
+
+3. A load balancer with a target group registered to the EC2 instance. With following specified public CIDR range and protocols allowed:
+- SSH 118.189.0.0/16
+- HTTP 118.189.0.0/16
+- HTTP 116.206.0.0/16
+- HTTP 223.25.0.0/16
